@@ -1,22 +1,36 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    public float speed = 10;
-    private float horizontal;
-    void Start()
+    private PlayerInputActions _input;
+    private Vector2 _moveInput;
+    [SerializeField] private float _moveSpeed = 5f;
+    private Rigidbody2D _rb;
+    private void Awake()
     {
-        rb = GetComponent<Rigidbody2D> ();
+        _input = new PlayerInputActions();
+        _rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-
+        _input.Enable();
+    }
+    private void OnDisable()
+    {
+        _input.Disable();
+    }
+    void Start()
+    {
+        
     }
     void FixedUpdate()
     {
+        _moveInput = _input.Player.Move.ReadValue<Vector2>();
+
+        _rb.linearVelocity = _moveInput * _moveSpeed;
 
     }
 }
