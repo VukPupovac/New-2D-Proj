@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2849033812674682476}
   - component: {fileID: 8329005519819525445}
   - component: {fileID: -7886329590986808121}
-  - component: {fileID: 5465748535714922606}
   - component: {fileID: 6192971048911216096}
+  - component: {fileID: 910701413799443963}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -121,19 +121,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5465748535714922606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432335670302123462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5e910c78098ee04287ddfb5f0fecedf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: ForGMPR2512-lesson-1::NewMonoBehaviourScript
-  _moveSpeed: 5
 --- !u!61 &6192971048911216096
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -180,3 +167,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &910701413799443963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432335670302123462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e927970554637ca44a84efca436dfe17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Square
+  _moveSpeed: 5
+  _jumpStrength: 5

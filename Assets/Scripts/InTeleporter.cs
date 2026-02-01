@@ -1,0 +1,26 @@
+using UnityEngine;
+
+public class InTeleporter : MonoBehaviour
+{
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] public Transform _destination;
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.GetComponent<Rigidbody2D>() != null)
+        {
+            Debug.Log("Teleported");
+            collision.transform.position = _destination.position;
+            collision.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+        }
+    }
+}
