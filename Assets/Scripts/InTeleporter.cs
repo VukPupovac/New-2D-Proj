@@ -20,7 +20,6 @@ public class InTeleporter : MonoBehaviour
         {
             Debug.Log("Teleported");
             collision.transform.position = _destination.position;
-            collision.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
         }
     }
 }
