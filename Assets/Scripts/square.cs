@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Square : MonoBehaviour
 {
-    private PlayerInputActions _input;  // Our bridge to the input system
+    private InputSystem_Actions _input;  // Our bridge to the input system
     //private PlayerInputActions _input;
 
     private Vector2 _moveInput;  //  stores x and y direction
@@ -13,7 +13,7 @@ public class Square : MonoBehaviour
 
     private void Awake()
     {
-        _input = new PlayerInputActions();
+        _input = new InputSystem_Actions();
         _rb = GetComponent<Rigidbody2D>();
     }
     private void OnEnable()

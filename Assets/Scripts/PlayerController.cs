@@ -3,13 +3,13 @@ using UnityEngine.InputSystem;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
-    private PlayerInputActions _input;
+    private InputSystem_Actions _input;
     private Vector2 _moveInput;
     [SerializeField] private float _moveSpeed = 5f;
     private Rigidbody2D _rb;
     private void Awake()
     {
-        _input = new PlayerInputActions();
+        _input = new InputSystem_Actions();
         _rb = GetComponent<Rigidbody2D>();
     }
 
